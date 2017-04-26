@@ -1,0 +1,13 @@
+1，所有智能指针方面的函数，库均使用 std c++
+2，所有concurrency，thread方面的函数，库优先使用 std c++
+3, hash map, hash set 请使用 unordered_map, unordered_set
+4，避免编译时候的warning。
+5, 不使用int，请使用 int32_t, uint64_t 类似的函数
+6, boost的使用，尽量少用，特别是在处理流程上
+7, 内存优化步骤
+	1）原生string，malloc，new
+	2）用tcmalloc，jemalloc优化
+	3）使用自己的内存池来管理
+8, 部分语言没有unsigned 类型，设计协议的时候需要考虑
+9, 类私有变量下划线开头
+10,构造函数初始化列表
